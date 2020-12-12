@@ -1,0 +1,7 @@
+#!/bin/bash
+
+sv start x11vnc || exit 1
+
+. /etc/settings.env
+
+exec x11vnc -rfbport "$RFBPORT" -display "$DISPLAY" -N -forever

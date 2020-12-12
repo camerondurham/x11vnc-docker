@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+    docker-vnc:
+        build:
+            context: ./
+            dockerfile: ./Dockerfile
+        image: x11vnc-docker
+        tty: true
+        stdin_open: true
+        container_name: x11vnc-docker
+        ports:
+            - "5920:5920"
+            - "6099:6099"
+        volumes:
+            - "/dev/shm:/dev/shm"

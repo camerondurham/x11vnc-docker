@@ -1,0 +1,7 @@
+#!/bin/bash
+
+sv start xvfb || exit 1
+
+. /etc/settings.env
+
+exec /usr/bin/fluxbox -display "$DISPLAY" -screen 0
