@@ -22,3 +22,5 @@ COPY settings.env /etc/settings.env
 COPY entrypoint.sh /entrypoint.sh
 
 EXPOSE 5920 6099
+
+ENTRYPOINT ["./entrypoint.sh"]
