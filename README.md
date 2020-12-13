@@ -7,6 +7,9 @@ process dependencies and launch commands.
 
 ## Usage
 
+### Build
+
+
 ```bash
 brew install --cask vnc-viewer
 
@@ -18,6 +21,9 @@ Expected output:
 ![x11vnc-docker.png](x11vnc-docker.png)
 
 Open vncviewer, enter address: `localhost:5920`
+
+
+### Edit
 
 To modify and rebuild image:
 
