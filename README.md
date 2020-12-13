@@ -13,6 +13,10 @@ brew install --cask vnc-viewer
 docker-compose up -d
 ```
 
+Expected output:
+
+![x11vnc-docker.png](x11vnc-docker.png)
+
 Open vncviewer, enter address: `localhost:5920`
 
 To modify and rebuild image:
