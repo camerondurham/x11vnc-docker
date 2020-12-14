@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# no dependencies, can start immediately 
+# no dependencies, can start immediately
 
 . /etc/settings.env
 

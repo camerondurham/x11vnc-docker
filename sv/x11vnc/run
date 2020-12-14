@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sv start x11vnc || exit 1
+sv start xvfb || exit 1
 
 . /etc/settings.env
 

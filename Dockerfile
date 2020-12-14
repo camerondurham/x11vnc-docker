@@ -12,7 +12,8 @@ ADD sv /etc/sv
 # link sv to service for runit to work
 RUN rm -rf /etc/sv/socklog* /etc/service/* /var/log/socklog* \
     && ln -s /etc/sv/* /etc/service/ \
-    && cd / && ln -s /etc/sv /service
+    && cd / && ln -s /etc/sv /service \
+    && chown root /etc/sv
 
 ENV \
   DEBIAN_FRONTEND="nonintractive"
