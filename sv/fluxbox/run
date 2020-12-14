@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# specify dependency is xvfb
+# must run X server before window manager
 sv start xvfb || exit 1
 
 . /etc/settings.env

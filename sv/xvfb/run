@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# no dependencies, can start immediately 
+
 . /etc/settings.env
 
 exec Xvfb "$DISPLAY" -listen tcp -screen 0 2560x1440x24

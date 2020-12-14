@@ -17,6 +17,7 @@ RUN rm -rf /etc/sv/socklog* /etc/service/* /var/log/socklog* \
 ENV \
   DEBIAN_FRONTEND="nonintractive"
 
+# settings.env contains environment variables for VNC port and X server
 COPY settings.env /etc/settings.env
 
 COPY entrypoint.sh /entrypoint.sh
