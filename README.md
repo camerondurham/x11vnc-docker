@@ -31,6 +31,12 @@ To modify and rebuild image:
 docker-compose up --build -d
 ```
 
+Install submodules:
+
+```bash
+git submodule init; git submodule update
+```
+
 ## Resources
 
 - https://qxf2.com/blog/view-docker-container-display-using-vnc-viewer/
