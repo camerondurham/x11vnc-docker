@@ -4,4 +4,4 @@
 
 . /etc/settings.env
 
-exec Xvfb "$DISPLAY" -listen tcp -screen 0 2560x1440x24
+exec Xvfb "$DISPLAY" -listen tcp -screen 0 "$SCREEN"
