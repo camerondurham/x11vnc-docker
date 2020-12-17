@@ -7,10 +7,15 @@ RUN apt-get update \
         fluxbox \
         runit \
         net-tools \
+        xterm \
         novnc \
     && apt-get autoclean -y \
     && apt-get autoremove -y \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /etc/sv/socklog* /etc/service/* /var/log/socklog* \
+    && ln -s /etc/sv/* /etc/service/ \
+    && ln -s /etc/sv /service \
+    && chown root /etc/sv
 
 ENV DEBIAN_FRONTEND="nonintractive"
 
@@ -19,12 +24,6 @@ ENV DEBIAN_FRONTEND="nonintractive"
 COPY rootfs /
 
 WORKDIR /
-
-# link sv to service for runit to work
-RUN rm -rf /etc/sv/socklog* /etc/service/* /var/log/socklog* \
-    && ln -s /etc/sv/* /etc/service/ \
-    && ln -s /etc/sv /service \
-    && chown root /etc/sv
 
 
 ENTRYPOINT ["./entrypoint.sh"]
