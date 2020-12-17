@@ -12,5 +12,6 @@ services:
         ports:
             - "5920:5920"
             - "6099:6099"
+            - "8080:8080"
         volumes:
             - "/dev/shm:/dev/shm"

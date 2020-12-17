@@ -4,4 +4,5 @@ sv start xvfb || exit 1
 
 . /etc/settings.env
 
-exec x11vnc -rfbport "$RFBPORT" -display "$DISPLAY" -N -forever
+# exec x11vnc -rfbport "$RFBPORT" -display "$DISPLAY" -N -forever -shared
+exec x11vnc -forever -shared

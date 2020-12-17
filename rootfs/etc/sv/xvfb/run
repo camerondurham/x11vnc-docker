@@ -4,4 +4,5 @@
 
 . /etc/settings.env
 
-exec Xvfb "$DISPLAY" -listen tcp -screen 0 "$SCREEN"
+# exec Xvfb "$DISPLAY" -listen tcp -screen 0 "$SCREEN"
+exec Xvfb "$DISPLAY" -screen 0 "$SCREEN" -listen tcp -ac

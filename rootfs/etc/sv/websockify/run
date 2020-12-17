@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sv start x11vnc || exit $?
+
+. /etc/settings.env
+websockify --web /usr/share/novnc 8080 localhost:5900
