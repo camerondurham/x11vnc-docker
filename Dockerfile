@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:16.04 as system
 
 RUN apt-get update \
     && apt-get install -y \
@@ -57,7 +57,7 @@ RUN sed -i 's#app/locale/#novnc/app/locale/#' /src/web/dist/static/novnc/app/ui.
 # merge
 ################################################################################
 FROM system
-LABEL maintainer="cadurham@tesla.com"
+LABEL maintainer="cameron.r.durham@gmail.com"
 
 COPY --from=builder /src/web/dist/ /usr/local/lib/web/frontend/
 COPY rootfs /
