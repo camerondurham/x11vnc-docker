@@ -37,6 +37,12 @@ Install submodules:
 git submodule init; git submodule update
 ```
 
+
+### TODO
+
+- [ ] add dbus to starting services
+- [ ] add novnc?
+
 ## Resources
 
 - https://qxf2.com/blog/view-docker-container-display-using-vnc-viewer/
